@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <div class="logo">Weather</div>
+        <div class="nav-links">
+          <a href="#" class="active">Home</a>
+          <a href="#">New</a>
+          <a href="#">Live Photo</a>
+          <a href="#">Contact</a>
+        </div>
+      </nav>
+
+      <div class="search-container">
+        <input
+          type="text"
+          id="locationInput"
+          placeholder="Find Your Location"
+        />
+        <button id="searchBtn">Find</button>
+      </div>
+
+      <div class="weather-cards">
+        <div class="card main-card">
+          <div class="card-header">
+            <div class="date">
+              <span id="day1"></span>
+              <span id="date1"></span>
+            </div>
+          </div>
+          <div class="card-body">
+            <h2 id="location">Enter a location</h2>
+            <div class="temperature">
+              <span id="temp1">--°C</span>
+            </div>
+            <div class="weather-icon">
+              <i id="icon1" class="fas fa-cloud"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span id="day2">Day 2</span>
+          </div>
+          <div class="card-body">
+            <div class="temperature">
+              <span id="temp2">--°C</span>
+            </div>
+            <div class="weather-icon">
+              <i id="icon2" class="fas fa-cloud"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span id="day3">Day 3</span>
+          </div>
+          <div class="card-body">
+            <div class="temperature">
+              <span id="temp3">--°C</span>
+            </div>
+            <div class="weather-icon">
+              <i id="icon3" class="fas fa-cloud"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subscribe-section">
+        <div class="subscribe-container">
+          <input type="email" placeholder="Enter Your E-mail To subscribe" />
+          <button class="subscribe-btn">Submit</button>
+        </div>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-google"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
