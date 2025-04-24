@@ -81,8 +81,10 @@ function getWeatherIcon(temp, weatherCondition) {
   return "fa-sun";
 }
 
+// Fetch weather data
 async function getWeatherData(city) {
   try {
+    // Show loading state
     location.textContent = "Loading...";
     temp1.textContent = "--°C";
     temp2.textContent = "--°C";
@@ -91,8 +93,17 @@ async function getWeatherData(city) {
     icon2.className = "fas fa-cloud";
     icon3.className = "fas fa-cloud";
 
+    // Get forecast data
     const response = await fetch(
-      `${config.BASE_URL}${config.ENDPOINTS.FORECAST}?key=${config.API_KEY}&q=${city}&days=3&aqi=no`
+      `${config.BASE_URL}${config.ENDPOINTS.FORECAST}?key=${config.API_KEY}&q=${city}&days=3&aqi=no`,
+      {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        mode: "cors", // إضافة هذا السطر
+      }
     );
 
     if (!response.ok) {
